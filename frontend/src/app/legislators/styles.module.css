@@ -1,0 +1,144 @@
+.pageContainer {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+  background-color: #f1f4fc;
+  height: calc(100vh - 114px);
+  padding: 40px 0px;
+}
+
+.tableContainer {
+  margin: 20px auto;
+  margin-top: 0;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(34, 31, 84, 0.2), 0 2px 4px rgba(34, 31, 84, 0.15);
+  overflow-x: auto;
+}
+
+.title {
+  color: #221f54;
+  margin-bottom: 20px;
+}
+
+.table {
+  width: 100%;
+  min-width: 1000px;
+  border-collapse: collapse;
+  background-color: #ffffff;
+}
+
+.table th,
+.table td {
+  text-align: left;
+  padding: 12px 16px;
+  border: 1px solid #dcdcdc;
+}
+
+.table th {
+  background-color: #221f54;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 14px;
+  position: relative; /* Necessário para alinhar o pseudo-elemento com o texto */
+}
+
+.table th::after {
+  content: "";
+  position: absolute;
+  top: 50%; /* Posiciona verticalmente ao meio */
+  right: 10px; /* Alinha à direita, com um espaçamento de 10px da borda */
+  transform: translateY(-50%); /* Ajusta o alinhamento vertical para o centro */
+  width: 10px;
+  height: 10px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512'%3E%3Cpath d='M137.4 41.4c12.5-12.5 32.8-12.5 45.3 0l128 128c9.2 9.2 11.9 22.9 6.9 34.9s-16.6 19.8-29.6 19.8L32 224c-12.9 0-24.6-7.8-29.6-19.8s-2.2-25.7 6.9-34.9l128-128zm0 429.3l-128-128c-9.2-9.2-11.9-22.9-6.9-34.9s16.6-19.8 29.6-19.8l256 0c12.9 0 24.6 7.8 29.6 19.8s2.2 25.7-6.9 34.9l-128 128c-12.5 12.5-32.8 12.5-45.3 0z' fill='%23ffffff'/%3E%3C/svg%3E%0A");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.table th:hover {
+  cursor: pointer;
+}
+
+.table tr:nth-child(even) {
+  background-color: #f7f7f7;
+}
+
+.table tr:hover {
+  background-color: #e0e0e0;
+}
+
+.table td {
+  color: #333333;
+  font-size: 14px;
+}
+
+.table td:first-child {
+  font-weight: bold;
+}
+
+/* .searchInput {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  } */
+
+.searchInput {
+  width: 100%;
+  max-width: 400px;
+  padding: 8px 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px; /* Borda arredondada para um visual clean */
+  background-color: #f9f9f9;
+  font-size: 14px;
+  color: #333;
+  transition: border 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.searchInput::placeholder {
+  color: #aaa; /* Cor do placeholder mais suave */
+  font-style: italic; /* Placeholder em itálico para um visual mais elegante */
+}
+
+.searchInput:focus {
+  border-color: #221f54; /* Cor da borda ao focar no input */
+  box-shadow: 0 4px 8px rgba(34, 31, 84, 0.2), 0 2px 4px rgba(34, 31, 84, 0.15);
+  outline: none; /* Remove o contorno padrão */
+}
+
+.searchInput:hover {
+  border-color: #666; /* Altera a cor da borda ao passar o mouse */
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  padding: 8px 16px;
+  margin: 0 5px;
+  cursor: pointer;
+  border: 1px solid #221f54;
+  background-color: #fff;
+  color: #221f54;
+  border-radius: 4px;
+}
+
+.pagination button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.pagination button.activePage {
+  background-color: #221f54;
+  color: #fff;
+}

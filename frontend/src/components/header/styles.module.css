@@ -1,0 +1,35 @@
+.headerContainer {
+  border-bottom: 1px solid #64648f;
+  background-color: #fff;
+  height: 60px;
+}
+
+.headerWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1024px;
+  height: 100%;
+  margin: auto;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menuItem {
+  list-style-type: none;
+  margin-left: 16px;
+}
+
+.menuLink {
+  font-weight: 500;
+  color: #221f54;
+}
+
+.menuLink:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
