@@ -39,7 +39,7 @@ This project uses the following technologies:
    npm install
 ```
 
-3. Create a .env file with:
+3. Create a .env file inside the backend folder with:
 
 ```bash
    PORT=5000
