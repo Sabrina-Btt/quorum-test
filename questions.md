@@ -31,9 +31,7 @@ On the frontend, I would ensure that the solution is flexible enough to handle n
 
 ---
 
-## How would you change your solution if instead ofreceiving CSVs of data, you were given a
-
-list of legislators or bills that you should generate a CSV for?
+## How would you change your solution if instead ofreceiving CSVs of data, you were given a list of legislators or bills that you should generate a CSV for?
 
 The modular structure of my code makes adding CSV generation straightforward. With controllers and logic separated, I can easily introduce a new route (e.g., /generate-csv) to handle CSV creation. Existing data validation and processing functions can be reused, ensuring consistency. The implementation would involve a utility function to dynamically convert a list of legislators or bills into CSV format, while a frontend button or UI element could trigger the download seamlessly. This approach minimizes changes to existing code and ensures an efficient, scalable solution.
 
